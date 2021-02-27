@@ -1,7 +1,7 @@
 {
   "name": "food-optimizer",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\">Food Saver 👋</h1>",
+  "description": "food optimizer",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
