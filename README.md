@@ -47,7 +47,7 @@ This application is covered by the ISC license.
 ## Tests
 ✏️ No testing at this time.
 ## Questions
-✋ Reach out to us on Github.<br />
+✋ Reach out to me on Github.<br />
 <br />
 
 [Adrian Ash](https://github.com/ashadria1)<br />
