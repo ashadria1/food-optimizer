@@ -1,36 +1,32 @@
-import { useEffect } from "react";
-import axios from "axios";
-import logo from "./logo.svg";
-import "./App.css";
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./containers/Home/Home";
+import Login from "./containers/Login/Login";
+import Register from "./containers/Register/Register";
+import Main from "./containers/Main/Main";
+import Add from "./containers/Add/Add";
+import Edit from "./containers/Edit/Edit";
+// import NavBar from "./components/NavBar/NavBar"
+
 
 function App() {
-  useEffect(() => {
-    axios
-      .get("/api/config")
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  const [user, setUser] = useState({
+    _id: "",
+  });
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        {/* <NavBar /> */}
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={(props) => <Login {...props} setUser={setUser} />} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/main" component={Main} />
+          <Route exact path="/main/new" component={Add} />
+          <Route exact path="/main/:id/edit" component={Edit} />
+        </Switch>
+      </Router>
     </div>
   );
 }
