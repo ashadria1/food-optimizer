@@ -60,6 +60,10 @@ E-mail:  ashadria@gmail.com
 
 ## Links
 
+### Heroku link:
+
+https://glacial-everglades-14576.herokuapp.com/
+
 ### Project repository:
 
 https://github.com/ashadria1/food-optimizer.git
